@@ -3,39 +3,34 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { MdPersonOutline } from 'react-icons/md';
 import { MdCode } from 'react-icons/md';
+import { ImProfile } from 'react-icons/im';
+import { default as logo } from '../Assets/Images/logo-no-background.svg';
 
 function Navigation() {
 	return (
-		<>
-			<Navbar bg='dark' variant='dark' sticky='top'>
-				<Container>
-					<Navbar.Brand href="#home">
-						<img
-							alt=""
-							src="/logo.svg"
-							width="30"
-							height="30"
-							className="d-inline-block align-top"
-						/>{' '}
-						Michael Prommer MSc. - Game Developer
-					</Navbar.Brand>
-					<Navbar.Toggle />
-					<Navbar.Collapse className="justify-content-end">
-						<Nav>
-							<Nav.Link>
-								<MdPersonOutline />{' '}About
-							</Nav.Link>
-							<Nav.Link>
-								<MdCode />{' '}Projects
-							</Nav.Link>
-							<Nav.Link>
-								<MdPersonOutline />{' '}CV
-							</Nav.Link>
-						</Nav>
-					</Navbar.Collapse>
-				</Container>
-			</Navbar>
-		</>
+		<Navbar bg='dark' variant='dark' sticky='top' className='px-3'>
+			<Container>
+				<Navbar.Brand href="#home">
+					<div className='d-flex align-items-center'>
+						<img src={logo} width="80" className='me-2' />
+					</div>
+				</Navbar.Brand>
+				<Navbar.Toggle />
+				<Navbar.Collapse className="justify-content-end">
+					<Nav>
+						<Nav.Link>
+							<MdPersonOutline />{' '}About
+						</Nav.Link>
+						<Nav.Link>
+							<MdCode />{' '}Projects
+						</Nav.Link>
+						<Nav.Link>
+							<ImProfile />{' '}CV
+						</Nav.Link>
+					</Nav>
+				</Navbar.Collapse>
+			</Container>
+		</Navbar>
 	);
 }
 

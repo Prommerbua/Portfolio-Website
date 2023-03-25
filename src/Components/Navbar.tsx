@@ -8,11 +8,11 @@ import { default as logo } from '../Assets/Images/logo-no-background.svg';
 
 function Navigation() {
 	return (
-		<Navbar bg='dark' variant='dark' sticky='top' className='px-3'>
+		<Navbar variant='dark' sticky='top' className='px-3'>
 			<Container>
 				<Navbar.Brand href="#home">
 					<div className='d-flex align-items-center'>
-						<img src={logo} width="80" className='me-2' />
+						<img alt='Logo MP' src={logo} width="80" className='me-2 filter-white' />
 					</div>
 				</Navbar.Brand>
 				<Navbar.Toggle />

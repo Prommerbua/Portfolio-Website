@@ -3,6 +3,7 @@ body {
     font-family: "Roboto";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 code {
@@ -10,17 +11,38 @@ code {
         monospace;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+    
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+//   box-shadow: inset 0 0 5px grey;
+  background-color: #211547;
+//   border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #694dbd;
+  border-radius: 10px;
+}
+
 .App {
     text-align: center;
 }
 
 .App-header {
-    background-color: #282c34;
+    background-color: #301e67;
+    background-image: url(../Images/background.svg);
+    background-size: cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     // font-size: calc(10px + 2vmin);
     color: white;
 }

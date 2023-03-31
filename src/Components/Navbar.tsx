@@ -5,6 +5,7 @@ import { MdPersonOutline } from 'react-icons/md';
 import { MdCode } from 'react-icons/md';
 import { ImProfile } from 'react-icons/im';
 import { default as logo } from '../Assets/Images/logo-no-background.svg';
+import { Link } from 'react-router-dom';
 
 function Navigation() {
 	return (
@@ -18,13 +19,13 @@ function Navigation() {
 				<Navbar.Toggle />
 				<Navbar.Collapse className="justify-content-end">
 					<Nav>
-						<Nav.Link>
+						<Nav.Link as={Link} to="/about">
 							<MdPersonOutline />{' '}About
 						</Nav.Link>
-						<Nav.Link>
+						<Nav.Link as={Link} to="/projects">
 							<MdCode />{' '}Projects
 						</Nav.Link>
-						<Nav.Link>
+						<Nav.Link as={Link} to="/cv">
 							<ImProfile />{' '}CV
 						</Nav.Link>
 					</Nav>

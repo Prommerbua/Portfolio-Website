@@ -9,11 +9,13 @@ import { Footer } from './Components/Footer';
 import { About } from './Pages/About';
 import { Projects } from './Pages/Projects';
 import { CV } from './Pages/CV';
+import { Particles } from './Components/Particles';
 
 
 function App() {
   return (
     <div className="App">
+      <Particles />
       <Navigation />
         <Routes>
           <Route path='/' element={<Home />} />

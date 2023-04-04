@@ -5,7 +5,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
     background-color: #301e67;
-    background-image: url(../Images/background.svg);
+    background-image: url(../Images/backgroundGradient.svg);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -59,6 +59,11 @@ code {
     color: white;
 }
 
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
 
 // @media (prefers-reduced-motion: no-preference) {
 //     .App-logo {

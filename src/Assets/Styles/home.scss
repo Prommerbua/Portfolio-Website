@@ -1,5 +1,5 @@
 .home-title {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
     text-align: start;
@@ -24,8 +24,33 @@
     height: 50px;
 
     &:hover {
-        color: #694dbd;
+        color: #2448e3;
     }
 
     border-radius: 50%;
 }
+
+
+// ABOUT SECTION
+.home-about-container {
+    background-color: #4900977c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .section-heading {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .section-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  
+  .section-text strong {
+    color: #0077cc;
+  }
+  

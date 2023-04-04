@@ -9,13 +9,13 @@ import { IconContext } from 'react-icons/lib';
 export const Home = () => {
     return (
         <header className="App-header pt-5">
-            <Container className='home-main-container'>
+            <Container className='home-main-container my-2'>
                 <Row>
                     <Col md={7} className="d-flex align-items-center">
                         <Collapse in appear timeout={1000}>
                             <div>
                                 <Row className='mb-4'>
-                                    <h4 className='d-flex justify-content-start'>Hi!</h4>
+                                    <h3 className='d-flex justify-content-start'>Hi!</h3>
                                 </Row>
                                 <Row>
                                     <Col>
@@ -31,27 +31,26 @@ export const Home = () => {
                 </Row>
             </Container>
 
-            <Container className='home-about-container mb-2'>
-                <Row className='justify-content-center align-items-center'>
-                    <Col md={7} className='d-flex align-items-center'>
-                        <Row>
-                            {/* <h4>Hi!</h4> */}
-                        </Row>
-                        <Row>
-                            <p>
-                                {/* <h1>My name is Michael</h1> */}
-                            </p>
-                            <p>
-                                {/* <h1>and I'm a game developer</h1> */}
-                            </p>
-                        </Row>
-                    </Col>
-                </Row>
+            <Container className='home-about-container my-4'>
+                <Col className='d-flex flex-column align-items-center justify-content-center'>
+                    <div className="my-3">
+                        <h2 className="section-heading">Introducing myself!</h2>
+                        <p className="section-text">
+                            I am a passionate programmer with a strong background in
+                            <strong> Computer Science (Bachelor's Degree) </strong>and
+                            <strong> Game Engineering and Simulation (Master's Degree) </strong>.
+                            I have expertise in <strong>C++, C#, and Javascript/Typescript</strong>.
+                        </p>
+                    </div>
+                </Col>
+            </Container>
+            <Container className='my-4'>
+
                 <Row className='justify-content-center align-items-center'>
                     <h3>Connect with me on</h3>
                 </Row>
                 <Row className='justify-content-center socials'>
-                    <IconContext.Provider value={{size: '30'}}>
+                    <IconContext.Provider value={{ size: '30' }}>
                         <Col md="auto">
                             <Link className='social-icon' to='https://github.com/Prommerbua' target='_blank'>
                                 <AiFillGithub />
@@ -70,11 +69,6 @@ export const Home = () => {
                         <Col md="auto">
                             <Link className='social-icon' to='https://www.instagram.com/prommerbua/' target='_blank'>
                                 <AiFillInstagram />
-                            </Link>
-                        </Col>
-                        <Col md="auto">
-                            <Link className='social-icon' to='https://www.instagram.com/prommerbua/'>
-                                <AiOutlineInstagram />
                             </Link>
                         </Col>
                     </IconContext.Provider>

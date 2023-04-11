@@ -18,14 +18,16 @@ function Navigation() {
 				</Navbar.Brand>
 				<Navbar.Toggle />
 				<Navbar.Collapse className="justify-content-end">
-					<Nav>
-						<Nav.Link as={Link} to="/">
-							<MdOutlineHome />{' '}Home
+					<Nav className='align-items-center px-1'>
+						<Nav.Link as={Link} to="/" className='me-2'>
+							<span>
+								<MdOutlineHome />{' '}Home
+							</span>
 						</Nav.Link>
-						<Nav.Link as={Link} to="/about">
+						<Nav.Link as={Link} to="/about" className='me-2'>
 							<MdPersonOutline />{' '}About
 						</Nav.Link>
-						<Nav.Link as={Link} to="/projects">
+						<Nav.Link as={Link} to="/projects" className='me-2'>
 							<MdCode />{' '}Projects
 						</Nav.Link>
 						<Nav.Link as={Link} to="/cv">

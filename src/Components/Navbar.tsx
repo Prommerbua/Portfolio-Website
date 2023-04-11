@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 function Navigation() {
 	return (
-		<Navbar variant='dark' sticky='top' className='px-3'>
+		<Navbar variant='dark' sticky='top' className='px-3' expand="sm" collapseOnSelect>
 			<Container>
 				<Navbar.Brand href="/">
 					<div className='d-flex align-items-center'>
@@ -17,21 +17,29 @@ function Navigation() {
 					</div>
 				</Navbar.Brand>
 				<Navbar.Toggle />
-				<Navbar.Collapse className="justify-content-end">
-					<Nav className='align-items-center px-1'>
-						<Nav.Link as={Link} to="/" className='me-2'>
+				<Navbar.Collapse className="justify-content-end" id='navbarCollapse'>
+					<Nav className='align-items-center px-1' style={{ columnGap: '1em' }}>
+						<Nav.Link as={Link} to="/" eventKey="1">
 							<span>
 								<MdOutlineHome />{' '}Home
 							</span>
 						</Nav.Link>
-						<Nav.Link as={Link} to="/about" className='me-2'>
-							<MdPersonOutline />{' '}About
+						<Nav.Link as={Link} to="/about" eventKey="2">
+							<span>
+								<MdPersonOutline />{' '}About
+							</span>
+
 						</Nav.Link>
-						<Nav.Link as={Link} to="/projects" className='me-2'>
-							<MdCode />{' '}Projects
+						<Nav.Link as={Link} to="/projects" eventKey="3">
+							<span>
+								<MdCode />{' '}Projects
+							</span>
 						</Nav.Link>
-						<Nav.Link as={Link} to="/cv">
-							<ImProfile />{' '}CV
+						<Nav.Link as={Link} to="/cv" eventKey="4">
+							<span>
+								<ImProfile />{' '}CV
+							</span>
+
 						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>

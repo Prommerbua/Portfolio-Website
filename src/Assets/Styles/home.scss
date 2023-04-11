@@ -12,7 +12,9 @@
     border-radius: 20%;
 }
 
-
+.socials {
+  white-space: nowrap;
+}
 
 .social-icon {
     color: black;
@@ -33,24 +35,24 @@
 
 // ABOUT SECTION
 .home-about-container {
-    background-color: #4900977c;
-    border-radius: 10px;
+    // background-color: #6b24b87c;
+      // border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
   }
   
   .section-heading {
-    font-size: 28px;
+    font-size: 2em;
     margin-bottom: 10px;
   }
   
   .section-text {
-    font-size: 16px;
+    font-size: 1.6em;
     line-height: 1.5;
     margin-bottom: 0;
   }
   
   .section-text strong {
-    color: #0077cc;
+    color: #9f53f0;
   }
   

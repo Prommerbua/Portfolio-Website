@@ -35,12 +35,19 @@ export const Home = () => {
                 <Col className='d-flex flex-column align-items-center justify-content-center'>
                     <div className="my-3">
                         <h2 className="section-heading">Introducing myself!</h2>
-                        <p className="section-text">
+                        <div className="section-text">
                             I am a passionate programmer with a strong background in
                             <strong> Computer Science (Bachelor's Degree) </strong>and
                             <strong> Game Engineering and Simulation (Master's Degree) </strong>.
-                            I have expertise in <strong>C++, C#, and Javascript/Typescript</strong>.
-                        </p>
+                            <p className='mt-4'>
+                                I have expertise in <strong>C++, C#, and Javascript/Typescript</strong> but also with <strong>Unity3D</strong>
+                                and <strong>Unreal Engine</strong>.
+                            </p>
+                            <p className='mt-4'>
+                                Please look around and feel free to contact me if you have any questions!
+
+                            </p>
+                        </div>
                     </div>
                 </Col>
             </Container>
@@ -51,22 +58,22 @@ export const Home = () => {
                 </Row>
                 <Row className='justify-content-center socials'>
                     <IconContext.Provider value={{ size: '30' }}>
-                        <Col md="auto">
+                        <Col md="auto" sm="auto" xs="auto">
                             <Link className='social-icon' to='https://github.com/Prommerbua' target='_blank'>
                                 <AiFillGithub />
                             </Link>
                         </Col>
-                        <Col md="auto">
+                        <Col md="auto" sm="auto" xs="auto">
                             <Link className='social-icon' to='https://www.linkedin.com/in/prommerbua/' target='_blank'>
                                 <AiFillLinkedin />
                             </Link>
                         </Col>
-                        <Col md="auto">
+                        <Col md="auto" sm="auto" xs="auto">
                             <Link className='social-icon' to='https://www.facebook.com/michi.prommer' target='_blank'>
                                 <AiFillFacebook />
                             </Link>
                         </Col>
-                        <Col md="auto">
+                        <Col md="auto" sm="auto" xs="auto">
                             <Link className='social-icon' to='https://www.instagram.com/prommerbua/' target='_blank'>
                                 <AiFillInstagram />
                             </Link>

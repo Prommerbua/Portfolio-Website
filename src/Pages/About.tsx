@@ -1,10 +1,60 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import profilePic from '../Assets/Images/profile-picture2.jpg'
-import { CgCPlusPlus } from 'react-icons/cg'
 import { FaBirthdayCake, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import { SiCplusplus, SiCsharp, SiJavascript, SiOpengl, SiTypescript, SiUnity, SiUnrealengine } from 'react-icons/si'
+import { DiNodejs, DiReact } from 'react-icons/di'
+import classNames from 'classnames'
+
+
+interface Skill {
+  name: string,
+  icon: JSX.Element,
+  className?: string
+}
 
 export const About = () => {
+
+  const skills: Skill[] = [
+    {
+      name: 'C++',
+      icon: <SiCplusplus />
+    },
+    {
+      name: 'C#',
+      icon: <SiCsharp />
+    },
+    {
+      name: 'Javascript',
+      icon: <SiJavascript />
+    },
+    {
+      name: 'TypeScript',
+      icon: <SiTypescript />
+    },
+    {
+      name: 'Node.js',
+      icon: <DiNodejs style={{padding: 0}}/>,
+    },
+    {
+      name: 'React',
+      icon: <DiReact />
+    },
+    {
+      name: 'Unity',
+      icon: <SiUnity />
+    },
+    {
+      name: 'Unreal Engine',
+      icon: <SiUnrealengine />
+    },
+    {
+      name: 'OpenGL',
+      icon: <SiOpengl />
+    }
+  ]
+
+
   return (
     <Container className='about-main-container'>
       <Row className='about-header'>
@@ -35,66 +85,18 @@ export const About = () => {
         <Col>
           <h2>Skillset</h2>
           <Row className='skill-row'>
-            <Col xs={6} sm={3} md={2}>
+            {skills.map((skill, index) => (
+              <Col xs={6} sm={3} md={2} key={index}>
+                <div className={classNames('skill-box', skill.className)} >
+                  {skill.icon}
+                </div>
+              </Col>
+            ))}
+            {/* <Col xs={6} sm={3} md={2}>
               <div className='skill-box'>
-                <CgCPlusPlus />
+                <SiCplusplus />
               </div>
-            </Col>
-            <Col xs={6} sm={3} md={2}>
-              <div className='skill-box'>
-                <CgCPlusPlus />
-              </div>
-            </Col>
-            <Col xs={6} sm={3} md={2}>
-              <div className='skill-box'>
-                <CgCPlusPlus />
-              </div>
-            </Col>
-            <Col xs={6} sm={3} md={2}>
-              <div className='skill-box'>
-                <CgCPlusPlus />
-              </div>
-            </Col>
-            <Col xs={6} sm={3} md={2}>
-              <div className='skill-box'>
-                <CgCPlusPlus />
-              </div>
-            </Col>
-            <Col xs={6} sm={3} md={2}>
-              <div className='skill-box'>
-                <CgCPlusPlus />
-              </div>
-            </Col>
-            <Col xs={6} sm={3} md={2}>
-              <div className='skill-box'>
-                <CgCPlusPlus />
-              </div>
-            </Col>
-            <Col xs={6} sm={3} md={2}>
-              <div className='skill-box'>
-                <CgCPlusPlus />
-              </div>
-            </Col>
-            <Col xs={6} sm={3} md={2}>
-              <div className='skill-box'>
-                <CgCPlusPlus />
-              </div>
-            </Col>
-            <Col xs={6} sm={3} md={2}>
-              <div className='skill-box'>
-                <CgCPlusPlus />
-              </div>
-            </Col>
-            <Col xs={6} sm={3} md={2}>
-              <div className='skill-box'>
-                <CgCPlusPlus />
-              </div>
-            </Col>
-            <Col xs={6} sm={3} md={2}>
-              <div className='skill-box'>
-                <CgCPlusPlus />
-              </div>
-            </Col>
+            </Col> */}
           </Row>
         </Col>
       </Row>

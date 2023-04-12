@@ -61,11 +61,19 @@
             align-items: center;
             justify-content: center;
             /* center icon horizontally */
+            overflow: hidden;
             margin-bottom: 1.5rem;
             padding: 1rem;
             border: 1px solid #9f53f0;
             border-radius: 5px;
             transition: all 0.2s ease;
+
+            .lineUp {
+                display: block;
+                padding: 0.5rem;
+                font-size: 22px;
+                opacity: 0;
+            }
 
             svg {
                 width: 60px;
@@ -74,13 +82,36 @@
             }
 
             &:hover {
-                //   background-color: #f5f5f5;
-                border-color: #333;
-                // border-width: 2px;
+                background-color: #9f53f0;
 
-                svg {
-                    // fill: #fff;
+                .lineUp {
+                    animation: 1s anim-lineUp ease-out forwards;
                 }
+
+                @keyframes anim-lineUp {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(80%);
+                    }
+
+                    20% {
+                        opacity: 0;
+                    }
+
+                    50% {
+                        opacity: 1;
+                        transform: translateY(0%);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0%);
+                    }
+                }
+
+                // svg {
+                //     // fill: #fff;
+                // }
             }
         }
     }

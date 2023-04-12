@@ -4,6 +4,19 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    background-color: #301e67;
+    background-image: url(../Images/backgroundGradient.svg);
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 code {
@@ -32,12 +45,12 @@ code {
 
 .App {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .App-header {
-    background-color: #301e67;
-    background-image: url(../Images/background.svg);
-    background-size: cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -47,6 +60,11 @@ code {
     color: white;
 }
 
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
 
 // @media (prefers-reduced-motion: no-preference) {
 //     .App-logo {

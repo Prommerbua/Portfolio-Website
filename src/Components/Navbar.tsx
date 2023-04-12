@@ -11,7 +11,7 @@ function Navigation() {
 	return (
 		<Navbar variant='dark' sticky='top' className='px-3' expand="sm" collapseOnSelect>
 			<Container>
-				<Navbar.Brand href="/">
+				<Navbar.Brand as={Link} to="/">
 					<div className='d-flex align-items-center'>
 						<img alt='Logo MP' src={logo} width="80" className='me-2 filter-white' />
 					</div>

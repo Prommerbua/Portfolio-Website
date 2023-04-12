@@ -1,7 +1,6 @@
-import React from 'react'
 import { Container, Row, Col, Collapse } from 'react-bootstrap'
 import profilePic from '../Assets/Images/profile-picture.jpg';
-import { AiFillFacebook, AiFillGithub, AiOutlineInstagram, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai'
+import { AiFillFacebook, AiFillGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons/lib';
 
@@ -26,7 +25,7 @@ export const Home = () => {
                         </Collapse>
                     </Col>
                     <Col md={5} className='d-flex align-items-center'>
-                        <img src={profilePic} className="profile-picture"></img>
+                        <img src={profilePic} alt='Profile' className="profile-picture"></img>
                     </Col>
                 </Row>
             </Container>
@@ -40,11 +39,11 @@ export const Home = () => {
                             <strong> Computer Science (Bachelor's Degree) </strong>and
                             <strong> Game Engineering and Simulation (Master's Degree) </strong>.
                             <p className='mt-4'>
-                                I have expertise in <strong>C++, C#, and Javascript/Typescript</strong> but also with <strong>Unity3D</strong>
+                                I have expertise in <strong>C++, C#,</strong> and <strong>Javascript/Typescript</strong> but also with <strong> Unity3D </strong>
                                 and <strong>Unreal Engine</strong>.
                             </p>
                             <p className='mt-4'>
-                                Please look around and feel free to contact me if you have any questions!
+                                Please look around and feel free to contact me!
 
                             </p>
                         </div>

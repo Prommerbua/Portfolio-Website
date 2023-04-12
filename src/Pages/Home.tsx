@@ -1,18 +1,20 @@
-import React from 'react'
 import { Container, Row, Col, Collapse } from 'react-bootstrap'
 import profilePic from '../Assets/Images/profile-picture.jpg';
+import { AiFillFacebook, AiFillGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai'
+import { Link } from 'react-router-dom';
+import { IconContext } from 'react-icons/lib';
 
 
 export const Home = () => {
     return (
-        <header className="App-header">
-            <Container className='home-main-container'>
+        <header className="App-header pt-5">
+            <Container className='home-main-container my-2'>
                 <Row>
-                    <Col md={7}>
+                    <Col md={7} className="d-flex align-items-center">
                         <Collapse in appear timeout={1000}>
                             <div>
                                 <Row className='mb-4'>
-                                    <h4 className='d-flex justify-content-start'>Hi!</h4>
+                                    <h3 className='d-flex justify-content-start'>Hi!</h3>
                                 </Row>
                                 <Row>
                                     <Col>
@@ -22,49 +24,60 @@ export const Home = () => {
                             </div>
                         </Collapse>
                     </Col>
-                    <Col md={5}>
-                        <img src={profilePic} className="profile-picture"></img>
+                    <Col md={5} className='d-flex align-items-center'>
+                        <img src={profilePic} alt='Profile' className="profile-picture"></img>
                     </Col>
                 </Row>
             </Container>
 
-            <Container className='home-about-container'>
-                <Row className='justify-content-center align-items-center'>
-                    <Col md={7}>
-                        <Row>
-                            {/* <h4>Hi!</h4> */}
-                        </Row>
-                        <Row>
-                            <p>
-                                {/* <h1>My name is Michael</h1> */}
+            <Container className='home-about-container my-4'>
+                <Col className='d-flex flex-column align-items-center justify-content-center'>
+                    <div className="my-3">
+                        <h2 className="section-heading">Introducing myself!</h2>
+                        <div className="section-text">
+                            I am a passionate programmer with a strong background in
+                            <strong> Computer Science (Bachelor's Degree) </strong>and
+                            <strong> Game Engineering and Simulation (Master's Degree) </strong>.
+                            <p className='mt-4'>
+                                I have expertise in <strong>C++, C#,</strong> and <strong>Javascript/Typescript</strong> but also with <strong> Unity3D </strong>
+                                and <strong>Unreal Engine</strong>.
                             </p>
-                            <p>
-                                {/* <h1>and I'm a game developer</h1> */}
+                            <p className='mt-4'>
+                                Please look around and feel free to contact me!
+
                             </p>
-                        </Row>
-                    </Col>
-                </Row>
+                        </div>
+                    </div>
+                </Col>
+            </Container>
+            <Container className='my-4'>
+
                 <Row className='justify-content-center align-items-center'>
                     <h3>Connect with me on</h3>
                 </Row>
-                <Row>
-                    <Col className='d-flex justify-content-center align-items-center'>
-                        <a href='https://www.linkedin.com/in/michael-prommer-0b0b3b1b3/'>
-                            LinkedIn
-                        </a>
-                    </Col>
-                    <Col className='d-flex justify-content-center align-items-center'>
-                        <a href='https://www.linkedin.com/in/michael-prommer-0b0b3b1b3/'>
-                        </a>
-                    </Col>
-                    <Col className='d-flex justify-content-center align-items-center'>
-                        <a href='https://www.linkedin.com/in/michael-prommer-0b0b3b1b3/'>
-                        </a>
-                    </Col>
-                    <Col className='d-flex justify-content-center align-items-center'>
-                        <a href='https://www.linkedin.com/in/michael-prommer-0b0b3b1b3/'>
-                        </a>
-                    </Col>
+                <Row className='justify-content-center socials'>
+                    <IconContext.Provider value={{ size: '30' }}>
+                        <Col md="auto" sm="auto" xs="auto">
+                            <Link className='social-icon' to='https://github.com/Prommerbua' target='_blank'>
+                                <AiFillGithub />
+                            </Link>
+                        </Col>
+                        <Col md="auto" sm="auto" xs="auto">
+                            <Link className='social-icon' to='https://www.linkedin.com/in/prommerbua/' target='_blank'>
+                                <AiFillLinkedin />
+                            </Link>
+                        </Col>
+                        <Col md="auto" sm="auto" xs="auto">
+                            <Link className='social-icon' to='https://www.facebook.com/michi.prommer' target='_blank'>
+                                <AiFillFacebook />
+                            </Link>
+                        </Col>
+                        <Col md="auto" sm="auto" xs="auto">
+                            <Link className='social-icon' to='https://www.instagram.com/prommerbua/' target='_blank'>
+                                <AiFillInstagram />
+                            </Link>
+                        </Col>
+                    </IconContext.Provider>
                 </Row>
             </Container>
         </header>

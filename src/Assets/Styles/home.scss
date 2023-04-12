@@ -1,5 +1,5 @@
 .home-title {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
     text-align: start;
@@ -11,3 +11,48 @@
     object-fit: cover;
     border-radius: 20%;
 }
+
+.socials {
+  white-space: nowrap;
+}
+
+.social-icon {
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+
+    &:hover {
+        color: #2448e3;
+    }
+
+    border-radius: 50%;
+}
+
+
+// ABOUT SECTION
+.home-about-container {
+    // background-color: #6b24b87c;
+      // border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .section-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .section-text {
+    font-size: 1.6em;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  
+  .section-text strong {
+    color: #9f53f0;
+  }
+  

@@ -1,4 +1,14 @@
 .footer {
     background-color: #03001C;
-    color: white
+    color: white;
+    margin-top: auto;
+}
+
+.footer-social-icon {
+    color: white;
+    gap: 1rem;
+
+    &:hover {
+        color: white;
+    }
 }

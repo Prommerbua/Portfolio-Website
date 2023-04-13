@@ -39,7 +39,6 @@ function Navigation() {
 							<span>
 								<ImProfile />{' '}CV
 							</span>
-
 						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>

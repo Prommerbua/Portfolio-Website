@@ -7,8 +7,8 @@ import { IconContext } from 'react-icons/lib';
 
 export const Home = () => {
     return (
-        <header className="App-header pt-5">
-            <Container className='home-main-container my-2'>
+        <header className="App-header">
+            <Container className='home-main-container'>
                 <Row>
                     <Col md={7} className="d-flex align-items-center">
                         <Collapse in appear timeout={1000}>

@@ -87,16 +87,12 @@ export const About = () => {
           <Row className='skill-row'>
             {skills.map((skill, index) => (
               <Col xs={6} sm={3} md={2} key={index}>
-                <div className={classNames('skill-box', skill.className)} >
+                <div className={classNames('skill-box d-flex flex-column', skill.className)} >
                   {skill.icon}
+                  <span className='lineUp'>{skill.name}</span>
                 </div>
               </Col>
             ))}
-            {/* <Col xs={6} sm={3} md={2}>
-              <div className='skill-box'>
-                <SiCplusplus />
-              </div>
-            </Col> */}
           </Row>
         </Col>
       </Row>

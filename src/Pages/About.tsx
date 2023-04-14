@@ -66,9 +66,7 @@ export const About = () => {
       <Row className='about-header'>
         <Col md={7} className='about-text'>
           <p>Hi, I am</p>
-          <p>
-            <h1>Michael Prommer</h1>
-          </p>
+          <h1>Michael Prommer</h1>
           <p>I am currently working as a <strong>BIM Developer</strong> in Vienna, Austria at Pde Integrale Planung GmbH, creating plugins for <i>Autodesk Revit</i>.</p>
           <p>When I'm not coding, I enjoy spending my free time playing video games and golfing.</p>
           <ul className='ms-0 p-0'>

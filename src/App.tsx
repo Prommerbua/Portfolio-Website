@@ -5,7 +5,7 @@ import Navigation from './Components/Navbar';
 import { Home } from './Pages/Home';
 import { Footer } from './Components/Footer';
 import { About } from './Pages/About';
-import { ProjectOverview } from './Pages/Projects';
+import { ProjectOverview } from './Pages/ProjectOverview';
 import { CV } from './Pages/CV';
 import { Particles } from './Components/Particles';
 import { Suspense } from 'react';

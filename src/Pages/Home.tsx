@@ -1,6 +1,7 @@
 import { Container, Row, Col, Collapse } from 'react-bootstrap'
 import profilePic from '../Assets/Images/profile-picture.jpg';
 import { AiFillFacebook, AiFillGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai'
+import { RiTwitchFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons/lib';
 
@@ -75,6 +76,11 @@ export const Home = () => {
                         <Col md="auto" sm="auto" xs="auto">
                             <Link className='social-icon' to='https://www.instagram.com/prommerbua/' target='_blank'>
                                 <AiFillInstagram />
+                            </Link>
+                        </Col>
+                        <Col md="auto" sm="auto" xs="auto">
+                            <Link className='social-icon' to='https://www.twitch.tv/prommerbua1' target='_blank'>
+                                <RiTwitchFill />
                             </Link>
                         </Col>
                     </IconContext.Provider>

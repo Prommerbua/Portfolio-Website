@@ -21,7 +21,7 @@ export const ProjectNavigation = () => {
                                 <MdOutlineArrowBackIos className='me-1' />Previous
                             </span>
                         </Nav.Link>
-                        <Nav.Link as={Link} to="#">
+                        <Nav.Link as={Link} to="/projects">
                             <span>
                                 Overview
                             </span>

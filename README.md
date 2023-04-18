@@ -1,6 +1,6 @@
 # Portfolio Website Template <br/>   
 
-[DEMO](michaelprommer.com)
+[DEMO](https://michaelprommer.com/)
 
 ---
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { IconContext } from 'react-icons'
 import { AiFillFacebook, AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
+import { RiTwitchFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 
 export const Footer = () => {
@@ -33,9 +34,14 @@ export const Footer = () => {
                 <AiFillFacebook />
               </Link>
             </Col>
-            <Col md="auto">
+            <Col md="auto" className='me-3'>
               <Link className='footer-social-icon' to='https://www.instagram.com/prommerbua/' target='_blank'>
                 <AiFillInstagram />
+              </Link>
+            </Col>
+            <Col md="auto">
+              <Link className='footer-social-icon' to='https://www.twitch.tv/prommerbua1' target='_blank'>
+                <RiTwitchFill />
               </Link>
             </Col>
           </IconContext.Provider>

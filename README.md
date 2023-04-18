@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# Portfolio Website Template <br/>   
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[DEMO](https://michaelprommer.com/)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+![Screenshot of Your Website Homepage](./src/Assets/Images/homepage.png)
 
-### `npm start`
+---
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This is a website template built with React, Typescript, and React Bootstrap. It features a homepage, a React Router navigation bar, a footer, a responsive design and much more. The purpose of this template is to provide a starting point for developers who want to create a portfolio website to showcase their projects.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Please give proper credit by linking back to [this repository](https://github.com/Prommerbua/Website) or my [GitHub profile](https://github.com/Prommerbua).
 
-### `npm test`
+## Technologies used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This website template was built with the following technologies:
 
-### `npm run build`
+- React
+- Typescript
+- React Bootstrap
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To use this website template, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone this repository to your local machine using `git clone [insert repo URL here]`
+2. Install the necessary dependencies by running `yarn install` in the terminal
+3. Start the project locally by running `yarn start` in the terminal
 
-### `npm run eject`
+After completing these steps, you will have a working version of the website running locally on your machine. From there, you can customize the website to your liking by adding your own content, modifying the styling, and adding new features as needed.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Customization
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This website template is highly customizable, and there are many ways you can modify it to suit your needs. Here are a few ideas to get you started:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Customize the styling of the website by modifying the SCSS files
+- Change the color scheme of the website to match your personal branding
+- Modify the content of the homepage and portfolio section to showcase your own projects and experience
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Contributions
 
-## Learn More
+If you find a bug or have a suggestion for how to improve this website template, feel free to open an issue.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This website template is licensed under the MIT License. For more information, see the LICENSE file in this repository.

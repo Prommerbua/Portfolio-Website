@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import profilePic from '../Assets/Images/profile-picture2.jpg'
 import { FaBirthdayCake, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
@@ -34,7 +34,7 @@ export const About = () => {
     },
     {
       name: 'Node.js',
-      icon: <DiNodejs style={{padding: 0}}/>,
+      icon: <DiNodejs style={{ padding: 0 }} />,
     },
     {
       name: 'React',
@@ -53,6 +53,12 @@ export const About = () => {
       icon: <SiOpengl />
     }
   ]
+  useEffect(() => {
+    let encEmail = "bWljaGFlbC5wcm9tbWVyQG91dGxvb2suZGU=";
+    const form = document.getElementById("contact");
+    form?.setAttribute("href", "mailto:".concat(window.atob(encEmail)));
+  }, [])
+
 
 
   return (
@@ -60,9 +66,7 @@ export const About = () => {
       <Row className='about-header'>
         <Col md={7} className='about-text'>
           <p>Hi, I am</p>
-          <p>
-            <h1>Michael Prommer</h1>
-          </p>
+          <h1>Michael Prommer</h1>
           <p>I am currently working as a <strong>BIM Developer</strong> in Vienna, Austria at Pde Integrale Planung GmbH, creating plugins for <i>Autodesk Revit</i>.</p>
           <p>When I'm not coding, I enjoy spending my free time playing video games and golfing.</p>
           <ul className='ms-0 p-0'>
@@ -70,10 +74,10 @@ export const About = () => {
               <FaBirthdayCake className='me-2' /> 08th December, 1996
             </li>
             <li className='d-flex align-items-center'>
-              <FaEnvelope className='me-2' /> <a href='mailto:michael.prommer@outlook.de'>michael.prommer@outlook.de</a>
+              <FaMapMarkerAlt className='me-2' /> St. Pölten, Austria
             </li>
             <li className='d-flex align-items-center'>
-              <FaMapMarkerAlt className='me-2' /> St. Pölten, Austria
+              <FaEnvelope className='me-2' /> <a href='' id='contact'>Contact me</a>
             </li>
           </ul>
         </Col>

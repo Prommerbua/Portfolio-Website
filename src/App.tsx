@@ -5,11 +5,14 @@ import Navigation from './Components/Navbar';
 import { Home } from './Pages/Home';
 import { Footer } from './Components/Footer';
 import { About } from './Pages/About';
-import { Projects } from './Pages/Projects';
+import { ProjectOverview } from './Pages/ProjectOverview';
 import { CV } from './Pages/CV';
 import { Particles } from './Components/Particles';
 import { Suspense } from 'react';
 import { Loading } from './Components/Loading';
+import { Kotl } from './Pages/Projects/Kotl';
+import { ProjectNavigation } from './Components/ProjectNavigation';
+import { Projects } from './Components/Projects';
 
 
 function App() {
@@ -21,7 +24,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/projects' element={<Projects />} />
+          <Route path='/projects' element={<ProjectOverview />} />
+          <Route path='/projects/*' element={<Projects />} />
           <Route path='/cv' element={<CV />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

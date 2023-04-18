@@ -6,7 +6,6 @@ import { Particles as TSParticles } from "react-tsparticles";
 export const Particles = () => {
 
     const particlesInit = useCallback(async (engine: Engine) => {
-        console.log(engine);
         await loadFull(engine);
     }, []);
 
@@ -79,7 +78,7 @@ export const Particles = () => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 1,
+                        speed: 0.5,
                         straight: false,
                     },
                     number: {
@@ -87,6 +86,7 @@ export const Particles = () => {
                             enable: true,
                             area: 800,
                         },
+                        limit: 1000,
                         value: 80,
                     },
                     opacity: {

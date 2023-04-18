@@ -24,6 +24,7 @@
     font-size: 2.5em;
     font-weight: bold;
     color: #9f53f0;
+    line-height: 1.5;
 }
 
 .about-text p {
@@ -40,6 +41,12 @@
     color: #9f53f0;
 }
 
+#contact {
+    // text-align: center;
+    white-space: nowrap;
+    color: white;
+    transition: all 0.3s;
+}
 .about-image {
     width: 80%;
     max-width: 350px;

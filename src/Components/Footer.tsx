@@ -4,6 +4,7 @@ import { IconContext } from 'react-icons'
 import { AiFillFacebook, AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
 import { RiTwitchFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
+import { socials } from '../Data/Socials'
 
 export const Footer = () => {
   return (
@@ -19,31 +20,15 @@ export const Footer = () => {
         </Col>
         <Col className='d-flex justify-content-center align-items-center'>
           <IconContext.Provider value={{ size: '20' }}>
-            <Col md="auto" className='me-3'>
-              <Link className='footer-social-icon' to='https://github.com/Prommerbua' target='_blank'>
-                <AiFillGithub />
-              </Link>
-            </Col>
-            <Col md="auto" className='me-3'>
-              <Link className='footer-social-icon' to='https://www.linkedin.com/in/prommerbua/' target='_blank'>
-                <AiFillLinkedin />
-              </Link>
-            </Col>
-            <Col md="auto" className='me-3'>
-              <Link className='footer-social-icon' to='https://www.facebook.com/michi.prommer' target='_blank'>
-                <AiFillFacebook />
-              </Link>
-            </Col>
-            <Col md="auto" className='me-3'>
-              <Link className='footer-social-icon' to='https://www.instagram.com/prommerbua/' target='_blank'>
-                <AiFillInstagram />
-              </Link>
-            </Col>
-            <Col md="auto">
-              <Link className='footer-social-icon' to='https://www.twitch.tv/prommerbua1' target='_blank'>
-                <RiTwitchFill />
-              </Link>
-            </Col>
+            {socials.map((social, index) => {
+              return (
+                <Col md="auto" className='me-3' key={index}>
+                  <Link className='footer-social-icon' to={social.url} target='_blank'>
+                    {social.icon}
+                  </Link>
+                </Col>
+              )
+            })}
           </IconContext.Provider>
         </Col>
       </Row>

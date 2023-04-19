@@ -4,9 +4,13 @@ import { AiFillFacebook, AiFillGithub, AiFillLinkedin, AiFillInstagram } from 'r
 import { RiTwitchFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons/lib';
+import { socials } from '../Data/Socials';
 
 
 export const Home = () => {
+
+
+
     return (
         <header className="App-header">
             <Container className='home-main-container'>
@@ -52,37 +56,18 @@ export const Home = () => {
                 </Col>
             </Container>
             <Container className='my-4'>
-
                 <Row className='justify-content-center align-items-center'>
                     <h3>Connect with me on</h3>
                 </Row>
                 <Row className='justify-content-center socials'>
                     <IconContext.Provider value={{ size: '30' }}>
-                        <Col md="auto" sm="auto" xs="auto">
-                            <Link className='social-icon' to='https://github.com/Prommerbua' target='_blank'>
-                                <AiFillGithub />
-                            </Link>
-                        </Col>
-                        <Col md="auto" sm="auto" xs="auto">
-                            <Link className='social-icon' to='https://www.linkedin.com/in/prommerbua/' target='_blank'>
-                                <AiFillLinkedin />
-                            </Link>
-                        </Col>
-                        <Col md="auto" sm="auto" xs="auto">
-                            <Link className='social-icon' to='https://www.facebook.com/michi.prommer' target='_blank'>
-                                <AiFillFacebook />
-                            </Link>
-                        </Col>
-                        <Col md="auto" sm="auto" xs="auto">
-                            <Link className='social-icon' to='https://www.instagram.com/prommerbua/' target='_blank'>
-                                <AiFillInstagram />
-                            </Link>
-                        </Col>
-                        <Col md="auto" sm="auto" xs="auto">
-                            <Link className='social-icon' to='https://www.twitch.tv/prommerbua1' target='_blank'>
-                                <RiTwitchFill />
-                            </Link>
-                        </Col>
+                        {socials.map((social, index) => (
+                            <Col md="auto" sm="auto" xs="auto" key={index}>
+                                <Link className='social-icon' to={social.url} target='_blank'>
+                                    {social.icon}
+                                </Link>
+                            </Col>
+                        ))}
                     </IconContext.Provider>
                 </Row>
             </Container>

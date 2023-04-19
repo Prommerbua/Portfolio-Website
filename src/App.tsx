@@ -10,8 +10,6 @@ import { CV } from './Pages/CV';
 import { Particles } from './Components/Particles';
 import { Suspense } from 'react';
 import { Loading } from './Components/Loading';
-import { Kotl } from './Pages/Projects/Kotl';
-import { ProjectNavigation } from './Components/ProjectNavigation';
 import { Projects } from './Components/Projects';
 
 

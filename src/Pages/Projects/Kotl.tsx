@@ -3,10 +3,19 @@ import { Button, Col, Container, Row } from 'react-bootstrap'
 
 export const Kotl = () => {
     return (
-        <Container >
+        <Container className='d-flex flex-column justify-content-evenly mt-3' style={{gap: '1em'}}>
             {/* <Banner /> */}
-
-            <iframe width="40%" height="auto" src="https://www.youtube.com/embed/DBmV8SEITzg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <Row >
+                <div>
+                    <iframe
+                        width="50%"
+                        style={{ aspectRatio: '16 / 9' }}
+                        src="https://www.youtube.com/embed/DBmV8SEITzg"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen></iframe>
+                </div>
+            </Row>
             <Row>
                 <Col>
                     <h3>About</h3>
@@ -32,7 +41,7 @@ export const Kotl = () => {
             </Row>
             <Row>
                 <Col>
-                    <Button href='https://temp-name.itch.io/kotl-prototype'>Play Demo on itch.io</Button>
+                    <Button  href='https://temp-name.itch.io/kotl-prototype'>Play Demo on itch.io</Button>
                 </Col>
             </Row>
             <Row>

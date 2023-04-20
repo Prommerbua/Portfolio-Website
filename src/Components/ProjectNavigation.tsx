@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { Project } from '../Data/Projects'
 
 interface ProjectNavigationProps {
@@ -9,18 +9,16 @@ interface ProjectNavigationProps {
 }
 
 export const ProjectNavigation = (props: ProjectNavigationProps) => {
-    const { state } = useLocation();
+    const location = useLocation();
     const [currentProject, setCurrentProject] = React.useState(0);
 
     useEffect(() => {
-        const currentProject = state?.currentProject;
-        if (currentProject) {
-            const index = props.projects.findIndex(project => project.url === currentProject);
-            setCurrentProject(index);
-        }
-    }, [state])
-
-
+        console.log(location);
+        let path = location.pathname.split('/');
+        let key = path[path.length-1];
+        const index = props.projects.findIndex(project => project.url === key);
+        setCurrentProject(index);
+    }, [location])
 
     return (
         <div className='project-nav-container' style={{ marginTop: 'auto' }}>
@@ -29,27 +27,33 @@ export const ProjectNavigation = (props: ProjectNavigationProps) => {
                     <Nav className='project-nav' >
                         <Col>
                             {currentProject > 0 &&
-                                <Nav.Link as={Link} to={props.projects[currentProject - 1].url} onClick={() => setCurrentProject(currentProject - 1)}>
-                                    <span>
-                                        <MdOutlineArrowBackIos className='me-1' />{props.projects[currentProject - 1].name}
-                                    </span>
-                                </Nav.Link>
+                                <div style={{ display: 'inline-block' }}>
+                                    <Nav.Link as={Link} to={props.projects[currentProject - 1].url} onClick={() => setCurrentProject(currentProject - 1)}>
+                                        <span>
+                                            <MdOutlineArrowBackIos className='me-1' />{props.projects[currentProject - 1].name}
+                                        </span>
+                                    </Nav.Link>
+                                </div>
                             }
                         </Col>
                         <Col>
-                            <Nav.Link as={Link} to="/projects">
-                                <span>
-                                    Overview
-                                </span>
-                            </Nav.Link>
+                            <div style={{ display: 'inline-block' }}>
+                                <Nav.Link as={Link} to="/projects">
+                                    <span>
+                                        Overview
+                                    </span>
+                                </Nav.Link>
+                            </div>
                         </Col>
                         <Col>
                             {currentProject < props.projects.length - 1 &&
-                                <Nav.Link as={Link} to={props.projects[currentProject + 1].url} onClick={() => setCurrentProject(currentProject + 1)}>
-                                    <span>
-                                        {props.projects[currentProject + 1].name}<MdOutlineArrowForwardIos className='ms-1' />
-                                    </span>
-                                </Nav.Link>
+                                <div style={{ display: 'inline-block' }}>
+                                    <Nav.Link as={Link} to={props.projects[currentProject + 1].url} onClick={() => setCurrentProject(currentProject + 1)}>
+                                        <span>
+                                            {props.projects[currentProject + 1].name}<MdOutlineArrowForwardIos className='ms-1' />
+                                        </span>
+                                    </Nav.Link>
+                                </div>
                             }
                         </Col>
                     </Nav>

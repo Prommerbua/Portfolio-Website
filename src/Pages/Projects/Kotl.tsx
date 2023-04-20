@@ -5,10 +5,18 @@ import { Banner } from '../../Components/Banner'
 
 
 export const Kotl = () => {
+
+    const images = [
+        {
+            src: '',
+            alt: ''
+        }
+    ]
+
     return (
         <>
-            <Banner imageUrl={kotl} title='Keeper of the Library'/>
-            <Container className='kotl-container d-flex flex-column justify-content-evenly mt-3' style={{ gap: '1em' }}>
+            <Banner imageUrl={kotl} title='Keeper of the Library' />
+            <Container className='kotl-container d-flex flex-column justify-content-evenly mt-5' style={{ gap: '2em' }}>
                 <Row >
                     <div>
                         <iframe
@@ -20,8 +28,8 @@ export const Kotl = () => {
                             allowFullScreen></iframe>
                     </div>
                 </Row>
-                <Row>
-                    <Col md={8}>
+                <Row className='justify-content-between'>
+                    <Col md={6}>
                         <h3>About</h3>
                         <p>
                             Keeper of the Library is a 3D Adventure/Puzzle Game, where you play as a flying book with magical abilities.
@@ -31,12 +39,13 @@ export const Kotl = () => {
                             This student project was made by a team of 4 and developed with the Unity Engine.
                             It is the winner of best in class award of the fall semester of 2020.
                         </p>
-
-                        <strong><u><a href="https://michaelprommer.com/wp-content/uploads/2021/03/Kotl_Winner.pdf">Certificate</a></u></strong>
+                        <p className='mb-0'>
+                            <strong><u><a href="https://michaelprommer.com/wp-content/uploads/2021/03/Kotl_Winner.pdf">Certificate</a></u></strong>
+                        </p>
                     </Col>
                     <Col md={4}>
                         <h3>Roles:</h3>
-                        <ul>
+                        <ul className='p-0'>
                             <li>Game Design</li>
                             <li>Sound Design</li>
                             <li>Gameplay Programming</li>
@@ -49,6 +58,11 @@ export const Kotl = () => {
                     </Col>
                 </Row>
                 <Row>
+                    {images.map((image, index) => (
+                        <Col key={index}>
+                            
+                        </Col>
+                    ))}
                     {/* Image Gallery */}
                 </Row>
             </Container>

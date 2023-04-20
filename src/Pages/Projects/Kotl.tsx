@@ -1,21 +1,56 @@
 import React from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
-import kotl from '../../Assets/Images/kotl.png'
+import kotlBanner from '../../Assets/Images/kotl_banner.png'
+import kotl1 from '../../Assets/Images/Kotl1.png'
+import kotl2 from '../../Assets/Images/Kotl2.png'
+import kotl3 from '../../Assets/Images/Kotl3.png'
+import kotl4 from '../../Assets/Images/Kotl4.png'
+import kotl5 from '../../Assets/Images/Kotl5.png'
+import kotl6 from '../../Assets/Images/Kotl6.png'
+
 import { Banner } from '../../Components/Banner'
+import { Gallery, Item } from 'react-photoswipe-gallery'
 
 
 export const Kotl = () => {
 
     const images = [
         {
-            src: '',
+            src: kotl1,
             alt: ''
-        }
+        },
+        {
+            src: kotl2,
+            alt: ''
+        },
+        {
+            src: kotl3,
+            alt: ''
+        },
+        {
+            src: kotl4,
+            alt: ''
+        },
+        {
+            src: kotl5,
+            alt: ''
+        },
+        {
+            src: kotl6,
+            alt: ''
+        },
     ]
+
+    const smallItemStyles: React.CSSProperties = {
+        cursor: 'pointer',
+        objectFit: 'cover',
+        width: '100%',
+        maxHeight: '100%',
+    }
 
     return (
         <>
-            <Banner imageUrl={kotl} title='Keeper of the Library' />
+            <Banner imageUrl={kotlBanner} title='Keeper of the Library' />
             <Container className='kotl-container d-flex flex-column justify-content-evenly mt-5' style={{ gap: '2em' }}>
                 <Row >
                     <div>
@@ -43,7 +78,7 @@ export const Kotl = () => {
                             <strong><u><a href="https://michaelprommer.com/wp-content/uploads/2021/03/Kotl_Winner.pdf">Certificate</a></u></strong>
                         </p>
                     </Col>
-                    <Col md={4}>
+                    <Col md={4} className='d-flex flex-column justify-content-start'>
                         <h3>Roles:</h3>
                         <ul className='p-0'>
                             <li>Game Design</li>
@@ -57,13 +92,29 @@ export const Kotl = () => {
                         <Button href='https://temp-name.itch.io/kotl-prototype'>Play Demo on itch.io</Button>
                     </Col>
                 </Row>
-                <Row>
-                    {images.map((image, index) => (
-                        <Col key={index}>
-                            
-                        </Col>
-                    ))}
-                    {/* Image Gallery */}
+                <Row className='mb-3'>
+                    <Col>
+                        <Gallery>
+                            <Row className='gallery'>
+                                {images.map((image, index) => (
+                                    <Col md={4} key={index} className='p-2 my-2'>
+                                        <Item
+                                            original={image.src}
+                                            thumbnail={image.src}
+                                            width="1920"
+                                            height="1080"
+                                        >
+                                            {({ ref, open }) => (
+                                                <img
+                                                    style={smallItemStyles}
+                                                    ref={ref as React.MutableRefObject<HTMLImageElement>} onClick={open} src={image.src} alt={image.alt} />
+                                            )}
+                                        </Item>
+                                    </Col>
+                                ))}
+                            </Row>
+                        </Gallery>
+                    </Col>
                 </Row>
             </Container>
         </>

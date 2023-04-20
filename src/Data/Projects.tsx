@@ -1,4 +1,4 @@
-import kotl from '../Assets/Images/kotl.png'
+import kotl from '../Assets/Images/kotl_banner.png'
 import destruction from '../Assets/Images/destruction.gif'
 import gamejam from '../Assets/Images/gamejam.gif'
 import { Kotl } from '../Pages/Projects/Kotl'

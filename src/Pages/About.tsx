@@ -6,6 +6,7 @@ import { SiCplusplus, SiCsharp, SiJavascript, SiOpengl, SiTypescript, SiUnity, S
 import { DiNodejs, DiReact } from 'react-icons/di'
 import classNames from 'classnames'
 import { ImProfile } from 'react-icons/im'
+import cv from '../Assets/Files/CV.pdf'
 
 
 interface Skill {
@@ -84,7 +85,7 @@ export const About = () => {
         </Col>
         <Col md={5} className='d-flex flex-column flex-fill justify-content-between align-items-center'>
             <img src={profilePic} alt='Profile' className="about-image"></img>
-            <Button href='https://temp-name.itch.io/kotl-prototype' target='_blank'
+            <Button href={cv} target='_blank'
             className='mb-2'
             ><ImProfile /> CV
             </Button>

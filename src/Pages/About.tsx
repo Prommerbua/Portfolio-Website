@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 import profilePic from '../Assets/Images/profile-picture2.jpg'
 import { FaBirthdayCake, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { SiCplusplus, SiCsharp, SiJavascript, SiOpengl, SiTypescript, SiUnity, SiUnrealengine } from 'react-icons/si'
 import { DiNodejs, DiReact } from 'react-icons/di'
 import classNames from 'classnames'
+import { ImProfile } from 'react-icons/im'
 
 
 interface Skill {
@@ -69,7 +70,7 @@ export const About = () => {
           <h1>Michael Prommer</h1>
           <p>I am currently working as a <strong>BIM Developer</strong> in Vienna, Austria at Pde Integrale Planung GmbH, creating plugins for <i>Autodesk Revit</i>.</p>
           <p>When I'm not coding, I enjoy spending my free time playing video games and golfing.</p>
-          <ul className='ms-0 p-0'>
+          <ul className='ms-0 mb-0 p-0'>
             <li className='d-flex align-items-center'>
               <FaBirthdayCake className='me-2' /> 08th December, 1996
             </li>
@@ -81,10 +82,15 @@ export const About = () => {
             </li>
           </ul>
         </Col>
-        <Col md={5}>
-          <img src={profilePic} alt='Profile' className="about-image"></img>
+        <Col md={5} className='d-flex flex-column flex-fill justify-content-between align-items-center'>
+            <img src={profilePic} alt='Profile' className="about-image"></img>
+            <Button href='https://temp-name.itch.io/kotl-prototype' target='_blank'
+            className='mb-2'
+            ><ImProfile /> CV
+            </Button>
         </Col>
       </Row>
+
       <Row className='about-skills'>
         <Col>
           <h2>Skillset</h2>

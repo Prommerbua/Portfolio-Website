@@ -11,6 +11,8 @@
 
 This is a website template built with React, Typescript, and React Bootstrap. It features a homepage, a React Router navigation bar, a footer, a responsive design and much more. The purpose of this template is to provide a starting point for developers who want to create a portfolio website to showcase their projects.
 
+Design Inspiration taken from [Soumyajit4419](https://github.com/soumyajit4419/Portfolio)
+
 Please give proper credit by linking back to [this repository](https://github.com/Prommerbua/Website) or my [GitHub profile](https://github.com/Prommerbua).
 
 ## Technologies used

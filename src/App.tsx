@@ -6,7 +6,6 @@ import { Home } from './Pages/Home';
 import { Footer } from './Components/Footer';
 import { About } from './Pages/About';
 import { ProjectOverview } from './Pages/ProjectOverview';
-import { CV } from './Pages/CV';
 import { Particles } from './Components/Particles';
 import { Suspense } from 'react';
 import { Loading } from './Components/Loading';
@@ -24,7 +23,6 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/projects' element={<ProjectOverview />} />
           <Route path='/projects/*' element={<Projects />} />
-          <Route path='/cv' element={<CV />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Suspense>

@@ -1,14 +1,19 @@
 import React from 'react'
 
-interface BannerProps {
+interface BannerProps extends React.HTMLAttributes<HTMLDivElement> {
     imageUrl: string;
     title: string;
 }
 
-export const Banner = (props: BannerProps) => {
+export const Banner = (bannerProps: BannerProps) => {
+
+    const bannerStyles: React.CSSProperties = {
+        backgroundImage: `url(${bannerProps.imageUrl})`,
+    }
+
     return (
-        <div className='banner' style={{ backgroundImage: `url(${props.imageUrl}` }}>
-            <h1>{props.title}</h1>
+        <div {...bannerProps} className='banner' style={{...bannerProps.style,  ...bannerStyles}} >
+            <h1>{bannerProps.title}</h1>
         </div>
     )
 }

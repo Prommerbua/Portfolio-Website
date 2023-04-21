@@ -8,7 +8,28 @@
     margin-bottom: 1.5rem;
 
     display: flex;
-    align-items: center;
+    // align-items: center;
+
+    .btn {
+        font-size: 0.5em;
+        font-weight: 300;
+        min-width: 150px;
+        color: white;
+        background-color: #9f53f0;
+        border: none;
+        border-radius: 10px;
+        padding: 0.5em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-5px);
+            color: white;
+            box-shadow: 0 0 10px rgba(135, 38, 239, 0.6);
+        }
+    }
 }
 
 .about-text {
@@ -16,7 +37,7 @@
     font-size: 0.8em;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
 }
 
@@ -47,9 +68,10 @@
     color: white;
     transition: all 0.3s;
 }
+
 .about-image {
     width: 80%;
-    max-width: 350px;
+    // max-width: 350px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -64,22 +86,25 @@
         margin-bottom: 2rem;
 
         .skill-box {
-            display: flex;
+            // display: flex;
             align-items: center;
             justify-content: center;
             /* center icon horizontally */
             overflow: hidden;
             margin-bottom: 1.5rem;
-            padding: 1rem;
+            padding: 2rem;
             border: 1px solid #9f53f0;
             border-radius: 5px;
             transition: all 0.2s ease;
 
             .lineUp {
                 display: block;
-                padding: 0.5rem;
+                position: absolute;
+                // padding: 0.5rem;
+                white-space: nowrap;
                 font-size: 22px;
-                opacity: 0;
+                opacity: 1;
+                visibility: hidden;
             }
 
             svg {
@@ -91,14 +116,20 @@
             &:hover {
                 background-color: #9f53f0;
 
+                svg {
+                    animation: 1s anim-lineUpIcon ease-out both;
+                }
+
                 .lineUp {
+                    visibility: visible;
                     animation: 1s anim-lineUp ease-out forwards;
                 }
 
                 @keyframes anim-lineUp {
                     0% {
                         opacity: 0;
-                        transform: translateY(80%);
+                        transform: translateY(0);
+                        
                     }
 
                     20% {
@@ -107,18 +138,32 @@
 
                     50% {
                         opacity: 1;
-                        transform: translateY(0%);
+                        transform: translateY(100%);
                     }
 
                     100% {
                         opacity: 1;
-                        transform: translateY(0%);
+                        transform: translateY(100%);
                     }
                 }
 
-                // svg {
-                //     // fill: #fff;
-                // }
+                @keyframes anim-lineUpIcon {
+                    
+                    0% {
+                        transform: translateY(0%);
+                        scale: 1;
+                    }
+
+                    50% {
+                        transform: translateY(-20%);
+                        scale: 0.9;
+                    }
+
+                    100% {
+                        transform: translateY(-20%);
+                        scale: 0.9;
+                    }
+                }
             }
         }
     }

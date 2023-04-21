@@ -35,11 +35,11 @@ function Navigation() {
 								<MdCode />{' '}Projects
 							</span>
 						</Nav.Link>
-						<Nav.Link as={Link} to="/cv" eventKey="4">
+						{/* <Nav.Link as={Link} to="/cv" eventKey="4">
 							<span>
 								<ImProfile />{' '}CV
 							</span>
-						</Nav.Link>
+						</Nav.Link> */}
 					</Nav>
 				</Navbar.Collapse>
 			</Container>

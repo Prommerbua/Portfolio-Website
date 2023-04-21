@@ -1,7 +1,9 @@
 import kotl from '../Assets/Images/kotl_banner.png'
-import destruction from '../Assets/Images/destruction.gif'
+import destruction from '../Assets/Images/Voronoi/destruction.gif'
 import gamejam from '../Assets/Images/gamejam.gif'
 import { Kotl } from '../Pages/Projects/Kotl'
+import { Voronoi } from '../Pages/Projects/Voronoi';
+import { Gamejam } from '../Pages/Projects/Gamejam';
 
 
 export interface Project {
@@ -33,7 +35,7 @@ export const projects: Project[] = [
         description: 'Implementation of two different algorithms in Unity for destroying objects in video games as the topic of my masters thesis.',
         url: 'voronoi',
         image: destruction,
-        element: <></>,
+        element: <Voronoi />,
         tags: [Tags.GameDevelopment, Tags.Unity]
     },
     {
@@ -41,7 +43,7 @@ export const projects: Project[] = [
         description: 'A 2D Plattformer/Bullet Hell game as a result of a private game jam',
         url: 'gamejam',
         image: gamejam,
-        element: <></>,
+        element: <Gamejam />,
         tags: [Tags.GameDevelopment, Tags.Unity]
     },
 ]

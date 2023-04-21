@@ -89,7 +89,7 @@ export const Kotl = () => {
                 </Row>
                 <Row>
                     <Col>
-                        <Button href='https://temp-name.itch.io/kotl-prototype'>Play Demo on itch.io</Button>
+                        <Button href='https://temp-name.itch.io/kotl-prototype' target='_blank'>Play Demo on itch.io</Button>
                     </Col>
                 </Row>
                 <Row className='mb-3'>

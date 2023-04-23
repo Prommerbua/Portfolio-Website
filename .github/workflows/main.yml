@@ -1,4 +1,4 @@
-name: build and deploy
+name: build and deploy to prommerbua.github.io Repo
 
 on:
   pull_request:
@@ -15,3 +15,22 @@ jobs:
         run: |
           yarn
           yarn build
+          
+      - name: Push to prommerbua.github.io repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          SSH_DEPLOY_KEY: ${{ }}
+        with:
+          source-directory: build/
+          destination-github-username: 'Prommerbua'
+          destination-repository-name: 'Prommerbua.github.io'
+          user-email: michaelprommer@outlook.de
+          commit-message: See ORIGIN_COMMIT from $GITHUB_REF
+          target-branch: master
+          
+          
+          
+          
+          
+          
+

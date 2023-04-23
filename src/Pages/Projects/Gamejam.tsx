@@ -15,23 +15,23 @@ export const Gamejam = () => {
         {
             src: gamejam1,
             width: 1024,
-            height: 1004,
+            height: 569,
 
         },
         {
             src: gamejam2,
-            width: 982,
-            height: 436,
+            width: 1024,
+            height: 571,
         },
         {
             src: gamejam3,
-            width: 959,
-            height: 418,
+            width: 1024,
+            height: 567,
         },
         {
             src: gamejam4,
-            width: 615,
-            height: 496,
+            width: 1024,
+            height: 571,
         },
     ]
 

@@ -31,7 +31,7 @@ This website template was built with the following technologies:
 
 To use this website template, follow these steps:
 
-1. Clone this repository to your local machine using `git clone [https://github.com/Prommerbua/Portfolio-Website.git]`
+1. Clone this repository to your local machine using `git clone https://github.com/Prommerbua/Portfolio-Website.git`
 2. Install the necessary dependencies by running `yarn install` in the terminal
 3. Start the project locally by running `yarn start` in the terminal
 

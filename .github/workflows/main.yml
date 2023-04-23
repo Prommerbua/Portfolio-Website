@@ -1,0 +1,14 @@
+on:
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
+    
+jobs:
+  buildAndRun:
+    runs-on: ubuntu-latest
+    steps:
+      - name: yarn install and build
+        run: |
+          yarn
+          yarn build

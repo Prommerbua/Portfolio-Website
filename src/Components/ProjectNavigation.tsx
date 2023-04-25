@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import { Link, NavLink, useLocation, useParams } from 'react-router-dom'
 import { Project } from '../Data/Projects'
 
 interface ProjectNavigationProps {
@@ -28,7 +28,7 @@ export const ProjectNavigation = (props: ProjectNavigationProps) => {
                         <Col>
                             {currentProject > 0 &&
                                 <div style={{ display: 'inline-block' }}>
-                                    <Nav.Link as={Link} to={props.projects[currentProject - 1].url} onClick={() => setCurrentProject(currentProject - 1)}>
+                                    <Nav.Link as={NavLink} to={props.projects[currentProject - 1].url} onClick={() => setCurrentProject(currentProject - 1)}>
                                         <span>
                                             <MdOutlineArrowBackIos className='me-1' />{props.projects[currentProject - 1].name}
                                         </span>
@@ -48,7 +48,7 @@ export const ProjectNavigation = (props: ProjectNavigationProps) => {
                         <Col>
                             {currentProject < props.projects.length - 1 &&
                                 <div style={{ display: 'inline-block' }}>
-                                    <Nav.Link as={Link} to={props.projects[currentProject + 1].url} onClick={() => setCurrentProject(currentProject + 1)}>
+                                    <Nav.Link as={NavLink} to={props.projects[currentProject + 1].url} onClick={() => setCurrentProject(currentProject + 1)}>
                                         <span>
                                             {props.projects[currentProject + 1].name}<MdOutlineArrowForwardIos className='ms-1' />
                                         </span>

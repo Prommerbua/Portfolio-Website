@@ -4,7 +4,7 @@
 
 ---
 
-![Screenshot of Your Website Homepage](./src/Assets/Images/homepage.png)
+![Screenshot of Your Website Homepage](./src/Assets/Images/ReadMeHeader.PNG)
 
 ---
 ## Overview

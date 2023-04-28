@@ -66,6 +66,8 @@
 
     .nav-link {
         width: auto;
+        white-space: nowrap;
+        flex-wrap: wrap;
     }
 }
 

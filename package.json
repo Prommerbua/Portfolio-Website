@@ -34,6 +34,7 @@
   "scripts": {
     "start": "set PORT=3008 && react-scripts --openssl-legacy-provider start",
     "build": "CI=false && react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -54,5 +55,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-snap": "^1.23.0"
   }
 }

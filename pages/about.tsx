@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import profilePic from '../Assets/Images/profile-picture2.jpg'
 import { FaBirthdayCake, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { SiCplusplus, SiCsharp, SiJavascript, SiOpengl, SiTypescript, SiUnity, SiUnrealengine } from 'react-icons/si'
 import { DiNodejs, DiReact } from 'react-icons/di'
 import classNames from 'classnames'
+import Image from 'next/image'
 import { ImProfile } from 'react-icons/im'
-import cv from '../Assets/Files/CV.pdf'
 
 
 interface Skill {
@@ -15,7 +14,7 @@ interface Skill {
   className?: string
 }
 
-export const About = () => {
+ const About = () => {
 
   const skills: Skill[] = [
     {
@@ -84,8 +83,8 @@ export const About = () => {
           </ul>
         </Col>
         <Col md={5} className='d-flex flex-column flex-fill justify-content-between align-items-center'>
-            <img src={profilePic} alt='Profile' className="about-image"></img>
-            <Button href={cv} target='_blank'
+            <Image src="/Images/profile-picture2.jpg" alt='Profile' className="about-image" width="2048" height="2048" />
+            <Button href="/Files/CV.pdf" target='_blank'
             className='mb-2'
             ><ImProfile /> CV
             </Button>
@@ -110,3 +109,5 @@ export const About = () => {
     </Container>
   )
 }
+
+export default About

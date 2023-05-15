@@ -1,16 +1,11 @@
 import { Container, Row, Col, Collapse } from 'react-bootstrap'
-import profilePic from '../Assets/Images/profile-picture.jpg';
 import { AiFillFacebook, AiFillGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai'
 import { RiTwitchFill } from 'react-icons/ri'
-import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons/lib';
 import { socials } from '../Data/Socials';
 
 
 export const Home = () => {
-
-
-
     return (
         <header className="App-header">
             <Container className='home-main-container'>
@@ -30,7 +25,7 @@ export const Home = () => {
                         </Collapse>
                     </Col>
                     <Col md={5} className='d-flex align-items-center'>
-                        <img src={profilePic} alt='Profile' className="profile-picture"></img>
+                        {/* <img src={profilePic} alt='Profile' className="profile-picture"></img> */}
                     </Col>
                 </Row>
             </Container>

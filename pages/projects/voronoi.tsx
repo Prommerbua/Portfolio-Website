@@ -1,36 +1,28 @@
 import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import { Banner } from '../../Components/Banner'
-import voronoiBanner from '../../Assets/Images/Voronoi/VoronoiBanner.png'
-import thesis from '../../Assets/Files/Masterarbeit.pdf'
-import voronoi1 from '../../Assets/Images/Voronoi/3dDelaunay.png'
-import voronoi2 from '../../Assets/Images/Voronoi/3dVoronoi.png'
-import voronoi3 from '../../Assets/Images/Voronoi/DelaunayVoronoiSelf-1024x1004.png'
-import voronoi4 from '../../Assets/Images/Voronoi/prefactureAll.png'
+import { Banner } from '../../src/Components/Banner'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 
-
-
-export const Voronoi = () => {
+const Voronoi = () => {
     const images: any[] = [
         {
-            src: voronoi3,
+            src: '/Images/Voronoi/DelaunayVoronoiSelf-1024x1004.png',
             width: 1024,
             height: 1004,
 
         },
         {
-            src: voronoi1,
+            src: '/Images/Voronoi/3dDelaunay.png',
             width: 982,
             height: 436,
         },
         {
-            src: voronoi2,
+            src: '/Images/Voronoi/3dVoronoi.png',
             width: 959,
             height: 418,
         },
         {
-            src: voronoi4,
+            src: '/Images/Voronoi/prefactureAll.png',
             width: 615,
             height: 496,
         },
@@ -46,7 +38,7 @@ export const Voronoi = () => {
 
     return (
         <>
-            <Banner imageUrl={voronoiBanner} title='Voronoi Object Destruction' />
+            <Banner imageUrl='/Images/Voronoi/VoronoiBanner.png' title='Voronoi Object Destruction' />
             <Container className='kotl-container d-flex flex-column justify-content-evenly mt-5' style={{ gap: '2em' }}>
                 <Row className='justify-content-between'>
                     <Col>
@@ -88,7 +80,7 @@ export const Voronoi = () => {
                         <Button href='https://github.com/Prommerbua/ShatteringTool' target='_blank'>Github Repository</Button>
                     </Col>
                     <Col>
-                        <Button href={thesis} target='_blank'>Thesis.pdf (German)</Button>
+                        <Button href='/Files/Masterarbeit.pdf' target='_blank'>Thesis.pdf (German)</Button>
                     </Col>
                 </Row>
                 <Row className='mb-3 gallery'>
@@ -119,3 +111,5 @@ export const Voronoi = () => {
         </>
     )
 }
+
+export default Voronoi

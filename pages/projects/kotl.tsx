@@ -1,42 +1,35 @@
 import React from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
-import kotlBanner from '../../Assets/Images/kotl_banner.png'
-import kotl1 from '../../Assets/Images/Kotl1.png'
-import kotl2 from '../../Assets/Images/Kotl2.png'
-import kotl3 from '../../Assets/Images/Kotl3.png'
-import kotl4 from '../../Assets/Images/Kotl4.png'
-import kotl5 from '../../Assets/Images/Kotl5.png'
-import kotl6 from '../../Assets/Images/Kotl6.png'
 
-import { Banner } from '../../Components/Banner'
+import { Banner } from '../../src/Components/Banner'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 
 
-export const Kotl = () => {
+const Kotl = () => {
 
     const images = [
         {
-            src: kotl1,
+            src: '/Images/Kotl1.png',
             alt: ''
         },
         {
-            src: kotl2,
+            src: '/Images/Kotl2.png',
             alt: ''
         },
         {
-            src: kotl3,
+            src: '/Images/Kotl3.png',
             alt: ''
         },
         {
-            src: kotl4,
+            src: '/Images/Kotl4.png',
             alt: ''
         },
         {
-            src: kotl5,
+            src: '/Images/Kotl5.png',
             alt: ''
         },
         {
-            src: kotl6,
+            src: '/Images/Kotl6.png',
             alt: ''
         },
     ]
@@ -50,7 +43,7 @@ export const Kotl = () => {
 
     return (
         <>
-            <Banner imageUrl={kotlBanner} title='Keeper of the Library' />
+            <Banner imageUrl='/Images/kotl_banner.png' title='Keeper of the Library' />
             <Container className='kotl-container d-flex flex-column justify-content-evenly mt-5' style={{ gap: '2em' }}>
                 <Row >
                     <div>
@@ -120,3 +113,5 @@ export const Kotl = () => {
         </>
     )
 }
+
+export default Kotl

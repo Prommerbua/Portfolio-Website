@@ -1,35 +1,31 @@
 import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import { Gallery, Item } from 'react-photoswipe-gallery'
-import { Banner } from '../../Components/Banner'
-import gamejamBanner from '../../Assets/Images/Gamejam/gamejamBanner.png'
-import gamejam1 from '../../Assets/Images/Gamejam/gamejam1.png'
-import gamejam2 from '../../Assets/Images/Gamejam/gamejam2.png'
-import gamejam3 from '../../Assets/Images/Gamejam/gamejam3.png'
-import gamejam4 from '../../Assets/Images/Gamejam/gamejam4.png'
+import { Banner } from '../../src/Components/Banner'
+import { ProjectNavigation } from '../../src/Components/ProjectNavigation'
 
 
-export const Gamejam = () => {
+const Gamejam = () => {
 
     const images: any[] = [
         {
-            src: gamejam1,
+            src: '/Images/Gamejam/gamejam1.png',
             width: 1024,
             height: 569,
 
         },
         {
-            src: gamejam2,
+            src: '/Images/Gamejam/gamejam2.png',
             width: 1024,
             height: 571,
         },
         {
-            src: gamejam3,
+            src: '/Images/Gamejam/gamejam3.png',
             width: 1024,
             height: 567,
         },
         {
-            src: gamejam4,
+            src: '/Images/Gamejam/gamejam4.png',
             width: 1024,
             height: 571,
         },
@@ -37,7 +33,7 @@ export const Gamejam = () => {
 
     return (
         <>
-            <Banner imageUrl={gamejamBanner} title='Private Gamejam'
+            <Banner imageUrl='Images/Gamejam/gamejamBanner.png' title='Private Gamejam'
                 style={{ backgroundPosition: '100% 44%' }}
             />
             <Container className='kotl-container d-flex flex-column justify-content-evenly mt-5' style={{ gap: '2em' }}>
@@ -78,3 +74,5 @@ export const Gamejam = () => {
         </>
     )
 }
+
+export default Gamejam

@@ -1,8 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { IconContext } from 'react-icons'
-import { AiFillFacebook, AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
-import { RiTwitchFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import { socials } from '../Data/Socials'
 

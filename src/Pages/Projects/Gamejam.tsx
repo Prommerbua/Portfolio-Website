@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import { Banner } from '../../Components/Banner'
 import gamejamBanner from '../../Assets/Images/Gamejam/gamejamBanner.png'

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
 import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md'
-import { Link, NavLink, useLocation, useParams } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Project } from '../Data/Projects'
 
 interface ProjectNavigationProps {
@@ -18,7 +18,7 @@ export const ProjectNavigation = (props: ProjectNavigationProps) => {
         let key = path[path.length - 1];
         const index = props.projects.findIndex(project => project.url === key);
         setCurrentProject(index);
-    }, [location])
+    }, [location, props.projects]);
 
     return (
         <div className='project-nav-container' style={{ marginTop: 'auto' }}>

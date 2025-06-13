@@ -79,7 +79,7 @@ export const About = () => {
               <FaMapMarkerAlt className='me-2' /> St. Pölten, Austria
             </li>
             <li className='d-flex align-items-center'>
-              <FaEnvelope className='me-2' /> <a href='' id='contact'>Contact me</a>
+              <FaEnvelope className='me-2' /> <a href='/#' id='contact'>Contact me</a>
             </li>
           </ul>
         </Col>

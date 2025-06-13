@@ -6,10 +6,6 @@ import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.getElementById('root') as HTMLElement
 
-
-const root = ReactDOM.createRoot(
-  rootElement
-);
 if (rootElement?.hasChildNodes()) {
   // If the root element has children, we assume that the page has been pre-rendered by `react-snap`.
   // In this case, we use `hydrate` to attach event listeners and make the app interactive.

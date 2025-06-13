@@ -3,9 +3,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { MdOutlineHome, MdPersonOutline } from 'react-icons/md';
 import { MdCode } from 'react-icons/md';
-import { ImProfile } from 'react-icons/im';
 import { default as logo } from '../Assets/Images/logo-no-background.svg';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Navigation() {
 	return (
